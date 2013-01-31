@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ACC6B9EC16BAE28A009948EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC6B9EB16BAE28A009948EA /* UIKit.framework */; };
+		ACC6B9EE16BAE28A009948EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC6B9ED16BAE28A009948EA /* Foundation.framework */; };
+		ACC6B9F016BAE28A009948EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC6B9EF16BAE28A009948EA /* CoreGraphics.framework */; };
+		ACC6B9F216BAE28A009948EA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC6B9F116BAE28A009948EA /* CoreData.framework */; };
+		ACC6B9F816BAE28A009948EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACC6B9F616BAE28A009948EA /* InfoPlist.strings */; };
+		ACC6B9FA16BAE28A009948EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6B9F916BAE28A009948EA /* main.m */; };
+		ACC6B9FE16BAE28A009948EA /* ParisBibliAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6B9FD16BAE28A009948EA /* ParisBibliAppDelegate.m */; };
+		ACC6BA0016BAE28A009948EA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6B9FF16BAE28A009948EA /* Default.png */; };
+		ACC6BA0216BAE28A009948EA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA0116BAE28A009948EA /* Default@2x.png */; };
+		ACC6BA0416BAE28A009948EA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA0316BAE28A009948EA /* Default-568h@2x.png */; };
+		ACC6BA0716BAE28A009948EA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA0516BAE28A009948EA /* MainStoryboard.storyboard */; };
+		ACC6BA0A16BAE28A009948EA /* ParisBibli.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BA0816BAE28A009948EA /* ParisBibli.xcdatamodeld */; };
+		ACC6BA0D16BAE28A009948EA /* ParisBibliMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BA0C16BAE28A009948EA /* ParisBibliMasterViewController.m */; };
+		ACC6BA1016BAE28A009948EA /* ParisBibliDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BA0F16BAE28A009948EA /* ParisBibliDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ACC6B9E816BAE28A009948EA /* ParisBibli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParisBibli.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC6B9EB16BAE28A009948EA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ACC6B9ED16BAE28A009948EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ACC6B9EF16BAE28A009948EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ACC6B9F116BAE28A009948EA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		ACC6B9F516BAE28A009948EA /* ParisBibli-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParisBibli-Info.plist"; sourceTree = "<group>"; };
+		ACC6B9F716BAE28A009948EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ACC6B9F916BAE28A009948EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ACC6B9FB16BAE28A009948EA /* ParisBibli-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParisBibli-Prefix.pch"; sourceTree = "<group>"; };
+		ACC6B9FC16BAE28A009948EA /* ParisBibliAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParisBibliAppDelegate.h; sourceTree = "<group>"; };
+		ACC6B9FD16BAE28A009948EA /* ParisBibliAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParisBibliAppDelegate.m; sourceTree = "<group>"; };
+		ACC6B9FF16BAE28A009948EA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		ACC6BA0116BAE28A009948EA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		ACC6BA0316BAE28A009948EA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		ACC6BA0616BAE28A009948EA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		ACC6BA0916BAE28A009948EA /* ParisBibli.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParisBibli.xcdatamodel; sourceTree = "<group>"; };
+		ACC6BA0B16BAE28A009948EA /* ParisBibliMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParisBibliMasterViewController.h; sourceTree = "<group>"; };
+		ACC6BA0C16BAE28A009948EA /* ParisBibliMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParisBibliMasterViewController.m; sourceTree = "<group>"; };
+		ACC6BA0E16BAE28A009948EA /* ParisBibliDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParisBibliDetailViewController.h; sourceTree = "<group>"; };
+		ACC6BA0F16BAE28A009948EA /* ParisBibliDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParisBibliDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACC6B9E516BAE28A009948EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC6B9EC16BAE28A009948EA /* UIKit.framework in Frameworks */,
+				ACC6B9EE16BAE28A009948EA /* Foundation.framework in Frameworks */,
+				ACC6B9F016BAE28A009948EA /* CoreGraphics.framework in Frameworks */,
+				ACC6B9F216BAE28A009948EA /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ACC6B9DF16BAE28A009948EA = {
+			isa = PBXGroup;
+			children = (
+				ACC6B9F316BAE28A009948EA /* ParisBibli */,
+				ACC6B9EA16BAE28A009948EA /* Frameworks */,
+				ACC6B9E916BAE28A009948EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ACC6B9E916BAE28A009948EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACC6B9E816BAE28A009948EA /* ParisBibli.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACC6B9EA16BAE28A009948EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACC6B9EB16BAE28A009948EA /* UIKit.framework */,
+				ACC6B9ED16BAE28A009948EA /* Foundation.framework */,
+				ACC6B9EF16BAE28A009948EA /* CoreGraphics.framework */,
+				ACC6B9F116BAE28A009948EA /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACC6B9F316BAE28A009948EA /* ParisBibli */ = {
+			isa = PBXGroup;
+			children = (
+				ACC6B9FC16BAE28A009948EA /* ParisBibliAppDelegate.h */,
+				ACC6B9FD16BAE28A009948EA /* ParisBibliAppDelegate.m */,
+				ACC6BA0516BAE28A009948EA /* MainStoryboard.storyboard */,
+				ACC6BA0B16BAE28A009948EA /* ParisBibliMasterViewController.h */,
+				ACC6BA0C16BAE28A009948EA /* ParisBibliMasterViewController.m */,
+				ACC6BA0E16BAE28A009948EA /* ParisBibliDetailViewController.h */,
+				ACC6BA0F16BAE28A009948EA /* ParisBibliDetailViewController.m */,
+				ACC6BA0816BAE28A009948EA /* ParisBibli.xcdatamodeld */,
+				ACC6B9F416BAE28A009948EA /* Supporting Files */,
+			);
+			path = ParisBibli;
+			sourceTree = "<group>";
+		};
+		ACC6B9F416BAE28A009948EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACC6B9F516BAE28A009948EA /* ParisBibli-Info.plist */,
+				ACC6B9F616BAE28A009948EA /* InfoPlist.strings */,
+				ACC6B9F916BAE28A009948EA /* main.m */,
+				ACC6B9FB16BAE28A009948EA /* ParisBibli-Prefix.pch */,
+				ACC6B9FF16BAE28A009948EA /* Default.png */,
+				ACC6BA0116BAE28A009948EA /* Default@2x.png */,
+				ACC6BA0316BAE28A009948EA /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACC6B9E716BAE28A009948EA /* ParisBibli */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACC6BA1316BAE28A009948EA /* Build configuration list for PBXNativeTarget "ParisBibli" */;
+			buildPhases = (
+				ACC6B9E416BAE28A009948EA /* Sources */,
+				ACC6B9E516BAE28A009948EA /* Frameworks */,
+				ACC6B9E616BAE28A009948EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParisBibli;
+			productName = ParisBibli;
+			productReference = ACC6B9E816BAE28A009948EA /* ParisBibli.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACC6B9E016BAE28A009948EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ParisBibli;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Bulté.net";
+			};
+			buildConfigurationList = ACC6B9E316BAE28A009948EA /* Build configuration list for PBXProject "ParisBibli" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ACC6B9DF16BAE28A009948EA;
+			productRefGroup = ACC6B9E916BAE28A009948EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACC6B9E716BAE28A009948EA /* ParisBibli */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACC6B9E616BAE28A009948EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC6B9F816BAE28A009948EA /* InfoPlist.strings in Resources */,
+				ACC6BA0016BAE28A009948EA /* Default.png in Resources */,
+				ACC6BA0216BAE28A009948EA /* Default@2x.png in Resources */,
+				ACC6BA0416BAE28A009948EA /* Default-568h@2x.png in Resources */,
+				ACC6BA0716BAE28A009948EA /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACC6B9E416BAE28A009948EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC6B9FA16BAE28A009948EA /* main.m in Sources */,
+				ACC6B9FE16BAE28A009948EA /* ParisBibliAppDelegate.m in Sources */,
+				ACC6BA0A16BAE28A009948EA /* ParisBibli.xcdatamodeld in Sources */,
+				ACC6BA0D16BAE28A009948EA /* ParisBibliMasterViewController.m in Sources */,
+				ACC6BA1016BAE28A009948EA /* ParisBibliDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ACC6B9F616BAE28A009948EA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACC6B9F716BAE28A009948EA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ACC6BA0516BAE28A009948EA /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACC6BA0616BAE28A009948EA /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACC6BA1116BAE28A009948EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ACC6BA1216BAE28A009948EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACC6BA1416BAE28A009948EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ParisBibli/ParisBibli-Prefix.pch";
+				INFOPLIST_FILE = "ParisBibli/ParisBibli-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ACC6BA1516BAE28A009948EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ParisBibli/ParisBibli-Prefix.pch";
+				INFOPLIST_FILE = "ParisBibli/ParisBibli-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACC6B9E316BAE28A009948EA /* Build configuration list for PBXProject "ParisBibli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC6BA1116BAE28A009948EA /* Debug */,
+				ACC6BA1216BAE28A009948EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACC6BA1316BAE28A009948EA /* Build configuration list for PBXNativeTarget "ParisBibli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC6BA1416BAE28A009948EA /* Debug */,
+				ACC6BA1516BAE28A009948EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ACC6BA0816BAE28A009948EA /* ParisBibli.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ACC6BA0916BAE28A009948EA /* ParisBibli.xcdatamodel */,
+			);
+			currentVersion = ACC6BA0916BAE28A009948EA /* ParisBibli.xcdatamodel */;
+			path = ParisBibli.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ACC6B9E016BAE28A009948EA /* Project object */;
+}
