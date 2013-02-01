@@ -7,8 +7,10 @@
 //
 
 #import "ParisBibliAppDelegate.h"
-
+#import <RestKit/RestKit.h>
+#import <RestKit/CoreData.h>
 #import "ParisBibliMasterViewController.h"
+#import "Bibliotheque.h"
 
 @implementation ParisBibliAppDelegate
 
@@ -16,12 +18,70 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+@synthesize window;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Initialize RestKit
+    NSURL *baseURL = [NSURL URLWithString:@"http://maboiteprivee.org"];
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
+    
+    // Enable Activity Indicator Spinner
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    
+    // Initialize managed object store
+//    ALB : already instanciated by template.
+//    NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    
+    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:self.managedObjectModel];
+    objectManager.managedObjectStore = managedObjectStore;
+    
+    // Setup our object mappings
+    RKEntityMapping *bibliMapping = [RKEntityMapping mappingForEntityForName:@"Bibliotheque" inManagedObjectStore:managedObjectStore];
+    bibliMapping.identificationAttributes = @[ @"nom" ];
+    [bibliMapping addAttributeMappingsFromDictionary:@{
+     @"Nom": @"nom",
+     @"Nom": @"nomCourt",
+     @"NomVoie": @"nomVoie",
+     @"Longitude": @"longitude",
+     @"Latitude": @"latitude",
+     @"NumeroVoie": @"numeroVoie",
+     @"CodePostal": @"codePostal",
+     @"ComplementVoie": @"complementVoie",
+     }];
+    
+    // Register our mappings with the provider
+//    ALB : not good, should point to bibli URI
+    RKResponseDescriptor *responseDescriptor =
+        [RKResponseDescriptor responseDescriptorWithMapping:bibliMapping
+                                                pathPattern:@"/bibliotheques/bibliotheques.json"
+                                                keyPath:nil
+                                                statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    [objectManager addResponseDescriptor:responseDescriptor];
+    
+    /**
+     Complete Core Data stack initialization
+     */
+    [managedObjectStore createPersistentStoreCoordinator];
+    NSString *storePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"ParisBibli.sqlite"];
+//    NSString *seedPath = [[NSBundle mainBundle] pathForResource:@"RKSeedDatabase" ofType:@"sqlite"];
+    NSError *error;
+    NSPersistentStore *persistentStore = [managedObjectStore addSQLitePersistentStoreAtPath:storePath fromSeedDatabaseAtPath:nil withConfiguration:nil options:nil error:&error];
+    NSAssert(persistentStore, @"Failed to add persistent store with error: %@", error);
+    
+    // Create the managed object contexts
+    [managedObjectStore createManagedObjectContexts];
+    
+    // Configure a managed object cache to ensure we do not create duplicate objects
+    managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext];
+    
+    // ** ORIGINAL Xcode template ** //
     // Override point for customization after application launch.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     ParisBibliMasterViewController *controller = (ParisBibliMasterViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
+    
+    // ALB changed context for the one provided by RestKit (?)
+    controller.managedObjectContext = managedObjectStore.persistentStoreManagedObjectContext;
     return YES;
 }
 							

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EADC5AB243C4299A6854476 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD61453610674A32AE362667 /* libPods.a */; };
 		ACC6B9EC16BAE28A009948EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC6B9EB16BAE28A009948EA /* UIKit.framework */; };
 		ACC6B9EE16BAE28A009948EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC6B9ED16BAE28A009948EA /* Foundation.framework */; };
 		ACC6B9F016BAE28A009948EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC6B9EF16BAE28A009948EA /* CoreGraphics.framework */; };
@@ -15,15 +16,21 @@
 		ACC6B9FA16BAE28A009948EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6B9F916BAE28A009948EA /* main.m */; };
 		ACC6B9FE16BAE28A009948EA /* ParisBibliAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6B9FD16BAE28A009948EA /* ParisBibliAppDelegate.m */; };
 		ACC6BA0016BAE28A009948EA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6B9FF16BAE28A009948EA /* Default.png */; };
-		ACC6BA0216BAE28A009948EA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA0116BAE28A009948EA /* Default@2x.png */; };
 		ACC6BA0416BAE28A009948EA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA0316BAE28A009948EA /* Default-568h@2x.png */; };
 		ACC6BA0716BAE28A009948EA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA0516BAE28A009948EA /* MainStoryboard.storyboard */; };
 		ACC6BA0A16BAE28A009948EA /* ParisBibli.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BA0816BAE28A009948EA /* ParisBibli.xcdatamodeld */; };
 		ACC6BA0D16BAE28A009948EA /* ParisBibliMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BA0C16BAE28A009948EA /* ParisBibliMasterViewController.m */; };
 		ACC6BA1016BAE28A009948EA /* ParisBibliDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BA0F16BAE28A009948EA /* ParisBibliDetailViewController.m */; };
+		ACC6BA1B16BAE697009948EA /* Bibliotheque.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BA1A16BAE697009948EA /* Bibliotheque.m */; };
+		ACC6BA2516BAF415009948EA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA2416BAF415009948EA /* Default@2x.png */; };
+		ACC6BA2716BAF421009948EA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA2616BAF421009948EA /* Default-568h@2x.png */; };
+		ACC6BA2916BAF426009948EA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA2816BAF426009948EA /* Default.png */; };
+		ACC6BA2B16BBE70D009948EA /* iPhone Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA2A16BBE70D009948EA /* iPhone Retina.png */; };
+		ACC6BA2D16BBE711009948EA /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA2C16BBE711009948EA /* iPhone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E92AC9330004DE4BB3099F3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		ACC6B9E816BAE28A009948EA /* ParisBibli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParisBibli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC6B9EB16BAE28A009948EA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ACC6B9ED16BAE28A009948EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +51,14 @@
 		ACC6BA0C16BAE28A009948EA /* ParisBibliMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParisBibliMasterViewController.m; sourceTree = "<group>"; };
 		ACC6BA0E16BAE28A009948EA /* ParisBibliDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParisBibliDetailViewController.h; sourceTree = "<group>"; };
 		ACC6BA0F16BAE28A009948EA /* ParisBibliDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParisBibliDetailViewController.m; sourceTree = "<group>"; };
+		ACC6BA1916BAE697009948EA /* Bibliotheque.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bibliotheque.h; path = ../Bibliotheque.h; sourceTree = "<group>"; };
+		ACC6BA1A16BAE697009948EA /* Bibliotheque.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bibliotheque.m; path = ../Bibliotheque.m; sourceTree = "<group>"; };
+		ACC6BA2416BAF415009948EA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		ACC6BA2616BAF421009948EA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		ACC6BA2816BAF426009948EA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		ACC6BA2A16BBE70D009948EA /* iPhone Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone Retina.png"; sourceTree = "<group>"; };
+		ACC6BA2C16BBE711009948EA /* iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone.png; sourceTree = "<group>"; };
+		DD61453610674A32AE362667 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +70,7 @@
 				ACC6B9EE16BAE28A009948EA /* Foundation.framework in Frameworks */,
 				ACC6B9F016BAE28A009948EA /* CoreGraphics.framework in Frameworks */,
 				ACC6B9F216BAE28A009948EA /* CoreData.framework in Frameworks */,
+				5EADC5AB243C4299A6854476 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,9 +80,15 @@
 		ACC6B9DF16BAE28A009948EA = {
 			isa = PBXGroup;
 			children = (
+				ACC6BA2C16BBE711009948EA /* iPhone.png */,
+				ACC6BA2A16BBE70D009948EA /* iPhone Retina.png */,
+				ACC6BA2816BAF426009948EA /* Default.png */,
+				ACC6BA2616BAF421009948EA /* Default-568h@2x.png */,
+				ACC6BA2416BAF415009948EA /* Default@2x.png */,
 				ACC6B9F316BAE28A009948EA /* ParisBibli */,
 				ACC6B9EA16BAE28A009948EA /* Frameworks */,
 				ACC6B9E916BAE28A009948EA /* Products */,
+				4E92AC9330004DE4BB3099F3 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +107,7 @@
 				ACC6B9ED16BAE28A009948EA /* Foundation.framework */,
 				ACC6B9EF16BAE28A009948EA /* CoreGraphics.framework */,
 				ACC6B9F116BAE28A009948EA /* CoreData.framework */,
+				DD61453610674A32AE362667 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -92,6 +115,8 @@
 		ACC6B9F316BAE28A009948EA /* ParisBibli */ = {
 			isa = PBXGroup;
 			children = (
+				ACC6BA1916BAE697009948EA /* Bibliotheque.h */,
+				ACC6BA1A16BAE697009948EA /* Bibliotheque.m */,
 				ACC6B9FC16BAE28A009948EA /* ParisBibliAppDelegate.h */,
 				ACC6B9FD16BAE28A009948EA /* ParisBibliAppDelegate.m */,
 				ACC6BA0516BAE28A009948EA /* MainStoryboard.storyboard */,
@@ -129,6 +154,7 @@
 				ACC6B9E416BAE28A009948EA /* Sources */,
 				ACC6B9E516BAE28A009948EA /* Frameworks */,
 				ACC6B9E616BAE28A009948EA /* Resources */,
+				4B08B93ECE7147B6AF653027 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,7 +173,7 @@
 			attributes = {
 				CLASSPREFIX = ParisBibli;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = "Bulté.net";
+				ORGANIZATIONNAME = "Bult√©.net";
 			};
 			buildConfigurationList = ACC6B9E316BAE28A009948EA /* Build configuration list for PBXProject "ParisBibli" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -173,13 +199,34 @@
 			files = (
 				ACC6B9F816BAE28A009948EA /* InfoPlist.strings in Resources */,
 				ACC6BA0016BAE28A009948EA /* Default.png in Resources */,
-				ACC6BA0216BAE28A009948EA /* Default@2x.png in Resources */,
 				ACC6BA0416BAE28A009948EA /* Default-568h@2x.png in Resources */,
 				ACC6BA0716BAE28A009948EA /* MainStoryboard.storyboard in Resources */,
+				ACC6BA2516BAF415009948EA /* Default@2x.png in Resources */,
+				ACC6BA2716BAF421009948EA /* Default-568h@2x.png in Resources */,
+				ACC6BA2916BAF426009948EA /* Default.png in Resources */,
+				ACC6BA2B16BBE70D009948EA /* iPhone Retina.png in Resources */,
+				ACC6BA2D16BBE711009948EA /* iPhone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B08B93ECE7147B6AF653027 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ACC6B9E416BAE28A009948EA /* Sources */ = {
@@ -191,6 +238,7 @@
 				ACC6BA0A16BAE28A009948EA /* ParisBibli.xcdatamodeld in Sources */,
 				ACC6BA0D16BAE28A009948EA /* ParisBibliMasterViewController.m in Sources */,
 				ACC6BA1016BAE28A009948EA /* ParisBibliDetailViewController.m in Sources */,
+				ACC6BA1B16BAE697009948EA /* Bibliotheque.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +322,7 @@
 		};
 		ACC6BA1416BAE28A009948EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E92AC9330004DE4BB3099F3 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParisBibli/ParisBibli-Prefix.pch";
@@ -285,6 +334,7 @@
 		};
 		ACC6BA1516BAE28A009948EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E92AC9330004DE4BB3099F3 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParisBibli/ParisBibli-Prefix.pch";
@@ -313,6 +363,7 @@
 				ACC6BA1516BAE28A009948EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
