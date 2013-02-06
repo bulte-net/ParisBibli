@@ -7,6 +7,7 @@
 //
 
 #import "ParisBibliMapViewController.h"
+#import "ParisBibliDetailViewController.h"
 #import "Bibliotheque.h"
 
 static void ParisBibliShowAlertWithError(NSError *error)
@@ -31,7 +32,7 @@ static void ParisBibliShowAlertWithError(NSError *error)
     RKLogConfigureByName("RestKit/Network", RKLogLevelDebug);
     
     // Setup View and Table View
-    self.title = @"Bibliothèques de Paris";
+    self.title = @"Carte - ParisBibli";
     
     MKUserTrackingBarButtonItem *buttonItem =[[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
     self.navigationItem.rightBarButtonItem = buttonItem;
@@ -87,12 +88,16 @@ static void ParisBibliShowAlertWithError(NSError *error)
     [_mapView setRegion:viewRegion animated:YES];
 }
 
+// Button refresh
 - (IBAction)refreshFeed:(id)sender {
     NSLog(@"Starting refresh...");
-    // TODO : update json from server
+    [self loadData];
+    // TODO : check new points do appear when data is reloaded
+    // -> equivalent of [self.tableView reloadData];
     NSLog(@"Refresh OK.");
 }
 
+// View for each pin
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
 	if (annotation == mapView.userLocation) { //returning nil means 'use built in location view'
 		return nil;
@@ -110,7 +115,23 @@ static void ParisBibliShowAlertWithError(NSError *error)
 	pinAnnotation.pinColor = MKPinAnnotationColorRed;
 	pinAnnotation.animatesDrop = YES;
 	
+    pinAnnotation.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    
 	return pinAnnotation;
+}
+
+// Called when detail is asked
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    
+    Bibliotheque *location = (Bibliotheque*)view.annotation;
+    [self performSegueWithIdentifier:@"showMapDetail" sender:location];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showMapDetail"]) {
+        ParisBibliDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.bibli = (Bibliotheque *)sender;
+    }
 }
 
 

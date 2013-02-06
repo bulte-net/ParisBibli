@@ -7,6 +7,7 @@
 //
 
 #import "ParisBibliDetailViewController.h"
+#import "Bibliotheque.h"
 
 @interface ParisBibliDetailViewController ()
 - (void)configureView;
@@ -14,32 +15,29 @@
 
 @implementation ParisBibliDetailViewController
 
-#pragma mark - Managing the detail item
+@synthesize bibli = _bibli;
 
-- (void)setDetailItem:(id)newDetailItem
-{
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
-    }
-}
+#pragma mark - Managing the detail item
 
 - (void)configureView
 {
     // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+    if (self.bibli) {
+        self.detailDescriptionLabel.text = self.bibli.nom;
+        self.title = self.bibli.nom;
+        self.detailAddress.text = self.bibli.address;
     }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+}
+
+- (IBAction)goByFoot:(id)sender {
+     NSDictionary *launchOptions = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeWalking};
+     [self.bibli.mapItem openInMapsWithLaunchOptions:launchOptions];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,5 +45,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 @end

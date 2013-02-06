@@ -135,11 +135,11 @@
 				ACC6B9FD16BAE28A009948EA /* ParisBibliAppDelegate.m */,
 				ACC6BA3916BC4602009948EA /* ParisBibliMapViewController.h */,
 				ACC6BA3A16BC4602009948EA /* ParisBibliMapViewController.m */,
-				ACC6BA0B16BAE28A009948EA /* ParisBibliMasterViewController.h */,
-				ACC6BA0C16BAE28A009948EA /* ParisBibliMasterViewController.m */,
 				ACC6BA0E16BAE28A009948EA /* ParisBibliDetailViewController.h */,
 				ACC6BA0F16BAE28A009948EA /* ParisBibliDetailViewController.m */,
 				ACC6BA0816BAE28A009948EA /* ParisBibli.xcdatamodeld */,
+				ACC6BA0B16BAE28A009948EA /* ParisBibliMasterViewController.h */,
+				ACC6BA0C16BAE28A009948EA /* ParisBibliMasterViewController.m */,
 				ACC6B9F416BAE28A009948EA /* Supporting Files */,
 			);
 			path = ParisBibli;

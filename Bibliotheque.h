@@ -23,5 +23,6 @@
 @property (nonatomic, retain) NSString * nomVoie;
 
 - (MKMapItem*)mapItem;
+- (NSString *)address;
 
 @end

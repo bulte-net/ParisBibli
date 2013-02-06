@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Bibliotheque.h"
 
 @interface ParisBibliDetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) Bibliotheque* bibli;
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *detailAddress;
+
+- (IBAction)goByFoot:(id)sender;
 @end
