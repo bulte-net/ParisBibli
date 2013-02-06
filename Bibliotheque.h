@@ -6,11 +6,12 @@
 //  Copyright (c) 2013 Bulté.net. All rights reserved.
 //
 
+#import <MapKit/MapKit.h>
 #import <RestKit/RestKit.h>
 #import <RestKit/CoreData.h>
 
 
-@interface Bibliotheque : NSManagedObject
+@interface Bibliotheque : NSManagedObject <MKAnnotation>
 
 @property (nonatomic, retain) NSString * nom;
 @property (nonatomic, retain) NSString * nomCourt;
@@ -20,5 +21,7 @@
 @property (nonatomic, retain) NSString * complementVoie;
 @property (nonatomic, retain) NSString * numeroVoie;
 @property (nonatomic, retain) NSString * nomVoie;
+
+- (MKMapItem*)mapItem;
 
 @end

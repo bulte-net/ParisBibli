@@ -27,6 +27,9 @@
 		ACC6BA2916BAF426009948EA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA2816BAF426009948EA /* Default.png */; };
 		ACC6BA2B16BBE70D009948EA /* iPhone Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA2A16BBE70D009948EA /* iPhone Retina.png */; };
 		ACC6BA2D16BBE711009948EA /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA2C16BBE711009948EA /* iPhone.png */; };
+		ACC6BA2F16BC4185009948EA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC6BA2E16BC4185009948EA /* MapKit.framework */; };
+		ACC6BA3B16BC4602009948EA /* ParisBibliMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BA3A16BC4602009948EA /* ParisBibliMapViewController.m */; };
+		ACC6BA4116C26C17009948EA /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC6BA4016C26C17009948EA /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,11 @@
 		ACC6BA2816BAF426009948EA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		ACC6BA2A16BBE70D009948EA /* iPhone Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone Retina.png"; sourceTree = "<group>"; };
 		ACC6BA2C16BBE711009948EA /* iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone.png; sourceTree = "<group>"; };
+		ACC6BA2E16BC4185009948EA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		ACC6BA3916BC4602009948EA /* ParisBibliMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParisBibliMapViewController.h; sourceTree = "<group>"; };
+		ACC6BA3A16BC4602009948EA /* ParisBibliMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParisBibliMapViewController.m; sourceTree = "<group>"; };
+		ACC6BA3F16BD3A5A009948EA /* Paris.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Paris.gpx; sourceTree = "<group>"; };
+		ACC6BA4016C26C17009948EA /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		DD61453610674A32AE362667 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC6BA4116C26C17009948EA /* AddressBook.framework in Frameworks */,
+				ACC6BA2F16BC4185009948EA /* MapKit.framework in Frameworks */,
 				ACC6B9EC16BAE28A009948EA /* UIKit.framework in Frameworks */,
 				ACC6B9EE16BAE28A009948EA /* Foundation.framework in Frameworks */,
 				ACC6B9F016BAE28A009948EA /* CoreGraphics.framework in Frameworks */,
@@ -80,6 +90,9 @@
 		ACC6B9DF16BAE28A009948EA = {
 			isa = PBXGroup;
 			children = (
+				ACC6BA4016C26C17009948EA /* AddressBook.framework */,
+				ACC6BA3F16BD3A5A009948EA /* Paris.gpx */,
+				ACC6BA2E16BC4185009948EA /* MapKit.framework */,
 				ACC6BA2C16BBE711009948EA /* iPhone.png */,
 				ACC6BA2A16BBE70D009948EA /* iPhone Retina.png */,
 				ACC6BA2816BAF426009948EA /* Default.png */,
@@ -115,11 +128,13 @@
 		ACC6B9F316BAE28A009948EA /* ParisBibli */ = {
 			isa = PBXGroup;
 			children = (
+				ACC6BA0516BAE28A009948EA /* MainStoryboard.storyboard */,
 				ACC6BA1916BAE697009948EA /* Bibliotheque.h */,
 				ACC6BA1A16BAE697009948EA /* Bibliotheque.m */,
 				ACC6B9FC16BAE28A009948EA /* ParisBibliAppDelegate.h */,
 				ACC6B9FD16BAE28A009948EA /* ParisBibliAppDelegate.m */,
-				ACC6BA0516BAE28A009948EA /* MainStoryboard.storyboard */,
+				ACC6BA3916BC4602009948EA /* ParisBibliMapViewController.h */,
+				ACC6BA3A16BC4602009948EA /* ParisBibliMapViewController.m */,
 				ACC6BA0B16BAE28A009948EA /* ParisBibliMasterViewController.h */,
 				ACC6BA0C16BAE28A009948EA /* ParisBibliMasterViewController.m */,
 				ACC6BA0E16BAE28A009948EA /* ParisBibliDetailViewController.h */,
@@ -239,6 +254,7 @@
 				ACC6BA0D16BAE28A009948EA /* ParisBibliMasterViewController.m in Sources */,
 				ACC6BA1016BAE28A009948EA /* ParisBibliDetailViewController.m in Sources */,
 				ACC6BA1B16BAE697009948EA /* Bibliotheque.m in Sources */,
+				ACC6BA3B16BC4602009948EA /* ParisBibliMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -110,7 +110,6 @@ static void ParisBibliShowAlertWithError(NSError *error)
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-//    ALB useless ?
     [self configureCell:cell atIndexPath:indexPath];
     Bibliotheque *bibli = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = bibli.nom;

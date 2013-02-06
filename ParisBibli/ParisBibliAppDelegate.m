@@ -9,7 +9,7 @@
 #import "ParisBibliAppDelegate.h"
 #import <RestKit/RestKit.h>
 #import <RestKit/CoreData.h>
-#import "ParisBibliMasterViewController.h"
+#import "ParisBibliMapViewController.h"
 #import "Bibliotheque.h"
 
 @implementation ParisBibliAppDelegate
@@ -78,7 +78,11 @@
     // ** ORIGINAL Xcode template ** //
     // Override point for customization after application launch.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    ParisBibliMasterViewController *controller = (ParisBibliMasterViewController *)navigationController.topViewController;
+
+    // ALB new version with MapView
+    ParisBibliMapViewController *controller = (ParisBibliMapViewController *)navigationController.topViewController;
+//ALB old version with table view
+//    ParisBibliMasterViewController *controller = (ParisBibliMasterViewController *)navigationController.topViewController;
     
     // ALB changed context for the one provided by RestKit (?)
     controller.managedObjectContext = managedObjectStore.persistentStoreManagedObjectContext;
