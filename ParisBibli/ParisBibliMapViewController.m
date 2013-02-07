@@ -87,9 +87,7 @@ static void ParisBibliShowAlertWithError(NSError *error)
 
 // Button refresh
 - (IBAction)refreshFeed:(id)sender {
-    NSLog(@"Starting refresh...");
     [self loadData];
-    NSLog(@"Refresh OK.");
 }
 
 - (IBAction)provideFeedback:(id)sender {
