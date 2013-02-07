@@ -75,7 +75,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUm-rL-g5M">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="479" id="G3M-kd-Mk4"/>
-                                    <constraint firstAttribute="width" constant="322" id="fLy-Km-2Pg"/>
+                                    <constraint firstAttribute="width" constant="322" id="Gcw-9A-hp6"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="Zs9-rm-7GH" id="Dlz-zY-XSq"/>
@@ -101,10 +101,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="g1g-l6-3AY" firstAttribute="bottom" secondItem="wyn-2L-QJc" secondAttribute="bottom" type="default" id="Azl-7y-yN8"/>
-                            <constraint firstItem="g1g-l6-3AY" firstAttribute="centerX" secondItem="wyn-2L-QJc" secondAttribute="centerX" type="default" id="dXL-FE-LbT"/>
                             <constraint firstItem="DUm-rL-g5M" firstAttribute="trailing" secondItem="wyn-2L-QJc" secondAttribute="trailing" type="default" id="h8z-cB-6hl"/>
                             <constraint firstItem="DUm-rL-g5M" firstAttribute="top" secondItem="wyn-2L-QJc" secondAttribute="top" constant="-1" id="jkQ-Az-has"/>
-                            <constraint firstItem="g1g-l6-3AY" firstAttribute="leading" secondItem="DUm-rL-g5M" secondAttribute="leading" type="default" id="phP-JE-oR4"/>
+                            <constraint firstItem="g1g-l6-3AY" firstAttribute="leading" secondItem="DUm-rL-g5M" secondAttribute="leading" type="default" id="oVq-ss-cOL"/>
+                            <constraint firstItem="g1g-l6-3AY" firstAttribute="centerX" secondItem="wyn-2L-QJc" secondAttribute="centerX" type="default" id="xop-gk-mpG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="dpb-tC-L05"/>
@@ -135,7 +135,7 @@
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Nom bibli" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="27">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="q8u-dA-r49"/>
+                                    <constraint firstAttribute="height" constant="47" id="GZ2-It-HHn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -148,10 +148,10 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1J0-Zk-vaN">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="147" id="9Ab-g2-0VR"/>
+                                    <constraint firstAttribute="width" constant="139" id="GUs-wu-XTT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Y aller à pied !">
+                                <state key="normal" title="Itinéraire piéton">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -179,25 +179,44 @@
                                     <action selector="provideFeedback:" destination="21" eventType="touchUpInside" id="fPI-cE-zAT"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1l-mZ-uQg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="WR6-Eb-cSo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Google Maps">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openGoogleMaps:" destination="21" eventType="touchUpInside" id="NQv-g5-xIe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="YgP-Eb-mCs" firstAttribute="top" secondItem="27" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3L5-m7-uCx"/>
                             <constraint firstItem="YgP-Eb-mCs" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4XO-5j-Olx"/>
-                            <constraint firstItem="1J0-Zk-vaN" firstAttribute="centerX" secondItem="YgP-Eb-mCs" secondAttribute="centerX" type="default" id="BSg-Cn-8PS"/>
-                            <constraint firstItem="zWB-aU-smI" firstAttribute="centerX" secondItem="1J0-Zk-vaN" secondAttribute="centerX" type="default" id="HwV-Wa-OT1"/>
+                            <constraint firstAttribute="bottom" secondItem="1J0-Zk-vaN" secondAttribute="bottom" constant="67" id="4mo-0b-Wam"/>
+                            <constraint firstItem="1J0-Zk-vaN" firstAttribute="baseline" secondItem="F1l-mZ-uQg" secondAttribute="baseline" type="default" id="EGj-XZ-T3s"/>
+                            <constraint firstItem="1J0-Zk-vaN" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="13" id="GVD-jc-K5d"/>
                             <constraint firstAttribute="trailing" secondItem="YgP-Eb-mCs" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Iun-or-XMd"/>
                             <constraint firstItem="27" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R0m-z7-TWk"/>
+                            <constraint firstItem="zWB-aU-smI" firstAttribute="centerX" secondItem="YgP-Eb-mCs" secondAttribute="centerX" type="default" id="UQD-WV-c5t"/>
+                            <constraint firstAttribute="trailing" secondItem="F1l-mZ-uQg" secondAttribute="trailing" constant="12" id="Xfi-jb-VBU"/>
                             <constraint firstItem="zWB-aU-smI" firstAttribute="bottom" secondItem="22" secondAttribute="bottom" type="default" id="iwv-Zc-Z1t"/>
-                            <constraint firstItem="YgP-Eb-mCs" firstAttribute="top" secondItem="22" secondAttribute="top" constant="101" id="nhu-6z-pyc"/>
                             <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pRe-qY-58T"/>
                             <constraint firstItem="27" firstAttribute="top" secondItem="22" secondAttribute="top" constant="51" id="shK-Xp-amf"/>
-                            <constraint firstItem="1J0-Zk-vaN" firstAttribute="top" secondItem="22" secondAttribute="top" constant="230" id="wyN-Pg-1vl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="26"/>
                     <connections>
                         <outlet property="detailAddress" destination="YgP-Eb-mCs" id="XIk-RJ-Fl5"/>
                         <outlet property="detailDescriptionLabel" destination="27" id="28"/>
+                        <outlet property="detailGoogleMaps" destination="F1l-mZ-uQg" id="aC0-ZS-2ga"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
@@ -205,31 +224,6 @@
             <point key="canvasLocation" x="956" y="-246"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ParisBibliDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParisBibliDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goByFoot:"/>
-                <relationship kind="action" name="provideFeedback:"/>
-                <relationship kind="outlet" name="detailAddress" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ParisBibliMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParisBibliMapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="provideFeedback:"/>
-                <relationship kind="action" name="refreshFeed:"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="ParisBibliMasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParisBibliMasterViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

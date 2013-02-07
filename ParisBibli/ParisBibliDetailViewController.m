@@ -27,6 +27,10 @@
         self.detailDescriptionLabel.text = self.bibli.nom;
         self.title = self.bibli.nom;
         self.detailAddress.text = self.bibli.address;
+        if ([[UIApplication sharedApplication] canOpenURL:
+             [NSURL URLWithString:@"comgooglemaps://"]]) {
+            self.detailGoogleMaps.hidden = false;
+        }
     }
 }
 
@@ -43,6 +47,13 @@
 
 - (IBAction)provideFeedback:(id)sender {
     [TestFlight openFeedbackView];
+}
+
+- (IBAction)openGoogleMaps:(id)sender {
+    NSMutableString *address = [NSMutableString stringWithString:self.bibli.address];
+    [address replaceOccurrencesOfString:@" " withString:@"+" options:0 range: NSMakeRange(0, [address length])];
+    NSString *mapsurl = [NSString stringWithFormat:@"comgooglemaps://?center=%f,%f&zoom=14&q=%@", [self.bibli.latitude doubleValue], [self.bibli.longitude doubleValue], address];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mapsurl]];
 }
 
 - (void)didReceiveMemoryWarning
