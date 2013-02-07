@@ -67,7 +67,6 @@
         <!--Paris Bibli Map View Controller - Item 1-->
         <scene sceneID="eUa-vT-3YT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EaC-YN-mNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Zs9-rm-7GH" customClass="ParisBibliMapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wyn-2L-QJc">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
@@ -75,18 +74,37 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUm-rL-g5M">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="505" id="TyH-3U-8KB"/>
+                                    <constraint firstAttribute="height" constant="479" id="G3M-kd-Mk4"/>
+                                    <constraint firstAttribute="width" constant="322" id="fLy-Km-2Pg"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="Zs9-rm-7GH" id="Dlz-zY-XSq"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1g-l6-3AY">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="yBV-lM-kRK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Feedback">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="provideFeedback:" destination="Zs9-rm-7GH" eventType="touchUpInside" id="U5Z-Ca-F4Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DUm-rL-g5M" firstAttribute="bottom" secondItem="wyn-2L-QJc" secondAttribute="bottom" type="default" id="2I8-gm-3bR"/>
-                            <constraint firstItem="DUm-rL-g5M" firstAttribute="trailing" secondItem="wyn-2L-QJc" secondAttribute="trailing" type="default" id="aon-VQ-Uvg"/>
-                            <constraint firstItem="DUm-rL-g5M" firstAttribute="leading" secondItem="wyn-2L-QJc" secondAttribute="leading" type="default" id="w6p-Cf-D6k"/>
+                            <constraint firstItem="g1g-l6-3AY" firstAttribute="bottom" secondItem="wyn-2L-QJc" secondAttribute="bottom" type="default" id="Azl-7y-yN8"/>
+                            <constraint firstItem="g1g-l6-3AY" firstAttribute="centerX" secondItem="wyn-2L-QJc" secondAttribute="centerX" type="default" id="dXL-FE-LbT"/>
+                            <constraint firstItem="DUm-rL-g5M" firstAttribute="trailing" secondItem="wyn-2L-QJc" secondAttribute="trailing" type="default" id="h8z-cB-6hl"/>
+                            <constraint firstItem="DUm-rL-g5M" firstAttribute="top" secondItem="wyn-2L-QJc" secondAttribute="top" constant="-1" id="jkQ-Az-has"/>
+                            <constraint firstItem="g1g-l6-3AY" firstAttribute="leading" secondItem="DUm-rL-g5M" secondAttribute="leading" type="default" id="phP-JE-oR4"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="dpb-tC-L05"/>
@@ -102,6 +120,7 @@
                         <segue destination="21" kind="push" identifier="showMapDetail" id="5bX-CN-q4I"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EaC-YN-mNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="513" y="424"/>
         </scene>
@@ -143,13 +162,32 @@
                                     <action selector="goByFoot:" destination="21" eventType="touchUpInside" id="LFo-nc-Rsh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWB-aU-smI">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="Jbn-uZ-zfU"/>
+                                    <constraint firstAttribute="height" constant="28" id="Wpl-qs-2Tg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Feedback">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="provideFeedback:" destination="Zs9-rm-7GH" eventType="touchUpInside" id="mmc-8C-mQW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YgP-Eb-mCs" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4XO-5j-Olx"/>
                             <constraint firstItem="1J0-Zk-vaN" firstAttribute="centerX" secondItem="YgP-Eb-mCs" secondAttribute="centerX" type="default" id="BSg-Cn-8PS"/>
+                            <constraint firstItem="zWB-aU-smI" firstAttribute="centerX" secondItem="1J0-Zk-vaN" secondAttribute="centerX" type="default" id="HwV-Wa-OT1"/>
                             <constraint firstAttribute="trailing" secondItem="YgP-Eb-mCs" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Iun-or-XMd"/>
                             <constraint firstItem="27" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R0m-z7-TWk"/>
+                            <constraint firstItem="zWB-aU-smI" firstAttribute="bottom" secondItem="22" secondAttribute="bottom" type="default" id="iwv-Zc-Z1t"/>
                             <constraint firstItem="YgP-Eb-mCs" firstAttribute="top" secondItem="22" secondAttribute="top" constant="101" id="nhu-6z-pyc"/>
                             <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pRe-qY-58T"/>
                             <constraint firstItem="27" firstAttribute="top" secondItem="22" secondAttribute="top" constant="51" id="shK-Xp-amf"/>
@@ -167,29 +205,6 @@
             <point key="canvasLocation" x="956" y="-246"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ParisBibliDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParisBibliDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goByFoot:"/>
-                <relationship kind="outlet" name="detailAddress" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ParisBibliMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParisBibliMapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="refreshFeed:"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="ParisBibliMasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParisBibliMasterViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

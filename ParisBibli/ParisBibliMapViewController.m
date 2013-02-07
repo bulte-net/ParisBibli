@@ -9,6 +9,7 @@
 #import "ParisBibliMapViewController.h"
 #import "ParisBibliDetailViewController.h"
 #import "Bibliotheque.h"
+#import "TestFlight.h"
 
 static void ParisBibliShowAlertWithError(NSError *error)
 {
@@ -95,6 +96,10 @@ static void ParisBibliShowAlertWithError(NSError *error)
     // TODO : check new points do appear when data is reloaded
     // -> equivalent of [self.tableView reloadData];
     NSLog(@"Refresh OK.");
+}
+
+- (IBAction)provideFeedback:(id)sender {
+    [TestFlight openFeedbackView];
 }
 
 // View for each pin

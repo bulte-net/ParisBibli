@@ -11,6 +11,7 @@
 #import <RestKit/CoreData.h>
 #import "ParisBibliMapViewController.h"
 #import "Bibliotheque.h"
+#import "TestFlight.h"
 
 @implementation ParisBibliAppDelegate
 
@@ -86,6 +87,10 @@
     
     // ALB changed context for the one provided by RestKit (?)
     controller.managedObjectContext = managedObjectStore.persistentStoreManagedObjectContext;
+    
+    // Test Flight
+    [TestFlight takeOff:@"511db6b67f0e3b8d01c5a4dea510f362_MTg0Mjc1MjAxMy0wMi0wNiAxNTo0OTo1MS4yMzk3MjM"];
+    
     return YES;
 }
 							
