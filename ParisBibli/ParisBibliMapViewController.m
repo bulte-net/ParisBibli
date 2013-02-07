@@ -71,12 +71,6 @@ static void ParisBibliShowAlertWithError(NSError *error)
 // initial position
 - (void)viewWillAppear:(BOOL)animated
 {
-    // TODO : remove ?
-    CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = 48.856614;
-    zoomLocation.longitude= 2.3522219;
-    
-    [self moveToLocation:zoomLocation];
 }
 
 // user position updated
