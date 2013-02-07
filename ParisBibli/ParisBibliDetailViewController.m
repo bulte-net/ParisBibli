@@ -8,6 +8,7 @@
 
 #import "ParisBibliDetailViewController.h"
 #import "Bibliotheque.h"
+#import "TestFlight.h"
 
 @interface ParisBibliDetailViewController ()
 - (void)configureView;
@@ -38,6 +39,10 @@
 - (IBAction)goByFoot:(id)sender {
      NSDictionary *launchOptions = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeWalking};
      [self.bibli.mapItem openInMapsWithLaunchOptions:launchOptions];
+}
+
+- (IBAction)provideFeedback:(id)sender {
+    [TestFlight openFeedbackView];
 }
 
 - (void)didReceiveMemoryWarning

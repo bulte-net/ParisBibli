@@ -3,7 +3,7 @@
 //  ParisBibli
 //
 //  Created by Alexandre Bulté on 01/02/13.
-//  Copyright (c) 2013 Bult√©.net. All rights reserved.
+//  Copyright (c) 2013 Bulté.net. All rights reserved.
 //
 
 #import "ParisBibliMapViewController.h"
@@ -39,15 +39,17 @@ static void ParisBibliShowAlertWithError(NSError *error)
     self.navigationItem.rightBarButtonItem = buttonItem;
     
     [self loadData];
-    [self drawLocations];
 }
 
 - (void)loadData
 {
+    // Useful ?
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     // Load the object model via RestKit
     [[RKObjectManager sharedManager] getObjectsAtPath:@"/bibliotheques/bibliotheques.json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         RKLogInfo(@"Load complete.");
         [[NSUserDefaults standardUserDefaults] synchronize];
+        [self drawLocations];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         RKLogError(@"Load failed with error: %@", error);
         ParisBibliShowAlertWithError(error);
@@ -63,7 +65,7 @@ static void ParisBibliShowAlertWithError(NSError *error)
     // trigger fetch (local) and place points
     for (Bibliotheque *bibli in self.fetchedResultsController.fetchedObjects) {
         [_mapView addAnnotation:bibli];
-    }
+    }    
 }
 
 // initial position
@@ -93,8 +95,6 @@ static void ParisBibliShowAlertWithError(NSError *error)
 - (IBAction)refreshFeed:(id)sender {
     NSLog(@"Starting refresh...");
     [self loadData];
-    // TODO : check new points do appear when data is reloaded
-    // -> equivalent of [self.tableView reloadData];
     NSLog(@"Refresh OK.");
 }
 
@@ -180,8 +180,7 @@ static void ParisBibliShowAlertWithError(NSError *error)
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     // In the simplest, most efficient, case, reload the table view.
-    //[self.tableView reloadData];
-    NSLog(@"TODO : do something when content changes...");
+    [self drawLocations];
 }
 
 

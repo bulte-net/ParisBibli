@@ -17,4 +17,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *detailAddress;
 
 - (IBAction)goByFoot:(id)sender;
+- (IBAction)provideFeedback:(id)sender;
 @end
