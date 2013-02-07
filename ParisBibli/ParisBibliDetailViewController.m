@@ -45,10 +45,6 @@
      [self.bibli.mapItem openInMapsWithLaunchOptions:launchOptions];
 }
 
-- (IBAction)provideFeedback:(id)sender {
-    [TestFlight openFeedbackView];
-}
-
 - (IBAction)openGoogleMaps:(id)sender {
     NSMutableString *address = [NSMutableString stringWithString:self.bibli.address];
     [address replaceOccurrencesOfString:@" " withString:@"+" options:0 range: NSMakeRange(0, [address length])];

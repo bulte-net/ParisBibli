@@ -90,10 +90,6 @@ static void ParisBibliShowAlertWithError(NSError *error)
     [self loadData];
 }
 
-- (IBAction)provideFeedback:(id)sender {
-    [TestFlight openFeedbackView];
-}
-
 // View for each pin
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
 	if (annotation == mapView.userLocation) { //returning nil means 'use built in location view'

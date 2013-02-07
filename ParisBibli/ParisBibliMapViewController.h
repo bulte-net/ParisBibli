@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 - (IBAction)refreshFeed:(id)sender;
-- (IBAction)provideFeedback:(id)sender;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;

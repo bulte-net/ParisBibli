@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5EADC5AB243C4299A6854476 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD61453610674A32AE362667 /* libPods.a */; };
+		ACA34FAB16C3E4E10079359B /* DetailButton.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA34FA916C3E4E10079359B /* DetailButton.png */; };
+		ACA34FAC16C3E4E10079359B /* DetailButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA34FAA16C3E4E10079359B /* DetailButton@2x.png */; };
 		ACC6B9EC16BAE28A009948EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC6B9EB16BAE28A009948EA /* UIKit.framework */; };
 		ACC6B9EE16BAE28A009948EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC6B9ED16BAE28A009948EA /* Foundation.framework */; };
 		ACC6B9F016BAE28A009948EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC6B9EF16BAE28A009948EA /* CoreGraphics.framework */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		4E92AC9330004DE4BB3099F3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		ACA34FA916C3E4E10079359B /* DetailButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailButton.png; sourceTree = "<group>"; };
+		ACA34FAA16C3E4E10079359B /* DetailButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DetailButton@2x.png"; sourceTree = "<group>"; };
 		ACC6B9E816BAE28A009948EA /* ParisBibli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParisBibli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC6B9EB16BAE28A009948EA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ACC6B9ED16BAE28A009948EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,15 +91,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ACC6B9DF16BAE28A009948EA = {
+		ACA34FB516C3EA720079359B /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				ACC6BA3F16BD3A5A009948EA /* Paris.gpx */,
 				ACC6BA2C16BBE711009948EA /* iPhone.png */,
+				ACA34FA916C3E4E10079359B /* DetailButton.png */,
+				ACA34FAA16C3E4E10079359B /* DetailButton@2x.png */,
 				ACC6BA2A16BBE70D009948EA /* iPhone Retina.png */,
 				ACC6BA2816BAF426009948EA /* Default.png */,
 				ACC6BA2616BAF421009948EA /* Default-568h@2x.png */,
 				ACC6BA2416BAF415009948EA /* Default@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		ACA34FB616C3EA820079359B /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				ACC6BA3F16BD3A5A009948EA /* Paris.gpx */,
+			);
+			name = Ressources;
+			sourceTree = "<group>";
+		};
+		ACC6B9DF16BAE28A009948EA = {
+			isa = PBXGroup;
+			children = (
+				ACA34FB616C3EA820079359B /* Ressources */,
+				ACA34FB516C3EA720079359B /* Images */,
 				ACC6B9F316BAE28A009948EA /* ParisBibli */,
 				ACC6B9EA16BAE28A009948EA /* Frameworks */,
 				ACC6B9E916BAE28A009948EA /* Products */,
@@ -188,7 +210,7 @@
 			attributes = {
 				CLASSPREFIX = ParisBibli;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = "Bult√©.net";
+				ORGANIZATIONNAME = "Bulté.net";
 			};
 			buildConfigurationList = ACC6B9E316BAE28A009948EA /* Build configuration list for PBXProject "ParisBibli" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -221,6 +243,8 @@
 				ACC6BA2916BAF426009948EA /* Default.png in Resources */,
 				ACC6BA2B16BBE70D009948EA /* iPhone Retina.png in Resources */,
 				ACC6BA2D16BBE711009948EA /* iPhone.png in Resources */,
+				ACA34FAB16C3E4E10079359B /* DetailButton.png in Resources */,
+				ACA34FAC16C3E4E10079359B /* DetailButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

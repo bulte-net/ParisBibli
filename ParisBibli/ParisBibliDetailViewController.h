@@ -18,6 +18,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *detailGoogleMaps;
 
 - (IBAction)goByFoot:(id)sender;
-- (IBAction)provideFeedback:(id)sender;
 - (IBAction)openGoogleMaps:(id)sender;
 @end
