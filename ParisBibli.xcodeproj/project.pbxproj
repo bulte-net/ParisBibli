@@ -90,9 +90,7 @@
 		ACC6B9DF16BAE28A009948EA = {
 			isa = PBXGroup;
 			children = (
-				ACC6BA4016C26C17009948EA /* AddressBook.framework */,
 				ACC6BA3F16BD3A5A009948EA /* Paris.gpx */,
-				ACC6BA2E16BC4185009948EA /* MapKit.framework */,
 				ACC6BA2C16BBE711009948EA /* iPhone.png */,
 				ACC6BA2A16BBE70D009948EA /* iPhone Retina.png */,
 				ACC6BA2816BAF426009948EA /* Default.png */,
@@ -116,6 +114,8 @@
 		ACC6B9EA16BAE28A009948EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ACC6BA4016C26C17009948EA /* AddressBook.framework */,
+				ACC6BA2E16BC4185009948EA /* MapKit.framework */,
 				ACC6B9EB16BAE28A009948EA /* UIKit.framework */,
 				ACC6B9ED16BAE28A009948EA /* Foundation.framework */,
 				ACC6B9EF16BAE28A009948EA /* CoreGraphics.framework */,
@@ -323,7 +323,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -331,6 +332,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
