@@ -47,9 +47,10 @@ static void ParisBibliShowAlertWithError(NSError *error)
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     // Load the object model via RestKit
     [[RKObjectManager sharedManager] getObjectsAtPath:@"/bibliotheques/bibliotheques.json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        RKLogInfo(@"Load complete.");
         [[NSUserDefaults standardUserDefaults] synchronize];
+//        RKManagedObjectStore *managedObjectStore = [RKObjectManager.sharedManager managedObjectStore];
         [self drawLocations];
+        RKLogInfo(@"Load complete.");
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         RKLogError(@"Load failed with error: %@", error);
         ParisBibliShowAlertWithError(error);

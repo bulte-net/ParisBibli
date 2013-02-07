@@ -23,6 +23,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Test Flight
+    [TestFlight takeOff:@"511db6b67f0e3b8d01c5a4dea510f362_MTg0Mjc1MjAxMy0wMi0wNiAxNTo0OTo1MS4yMzk3MjM"];
+    
     // Initialize RestKit
     NSURL *baseURL = [NSURL URLWithString:@"http://maboiteprivee.org"];
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
@@ -80,10 +83,7 @@
    
     // ALB changed context for the one provided by RestKit (?)
     controller.managedObjectContext = managedObjectStore.persistentStoreManagedObjectContext;
-    
-    // Test Flight
-    [TestFlight takeOff:@"511db6b67f0e3b8d01c5a4dea510f362_MTg0Mjc1MjAxMy0wMi0wNiAxNTo0OTo1MS4yMzk3MjM"];
-    
+       
     return YES;
 }
 							
