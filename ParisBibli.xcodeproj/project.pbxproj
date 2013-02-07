@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5EADC5AB243C4299A6854476 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD61453610674A32AE362667 /* libPods.a */; };
+		AC0DE3A416C3F23000D442FA /* ParisBibliInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0DE3A316C3F23000D442FA /* ParisBibliInfoViewController.m */; };
+		AC0DE3AB16C3F46600D442FA /* bulte_abeille_rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0DE3A916C3F46600D442FA /* bulte_abeille_rectangle.png */; };
+		AC0DE3AC16C3F46600D442FA /* bulte_abeille_rectangle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0DE3AA16C3F46600D442FA /* bulte_abeille_rectangle@2x.png */; };
 		ACA34FAB16C3E4E10079359B /* DetailButton.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA34FA916C3E4E10079359B /* DetailButton.png */; };
 		ACA34FAC16C3E4E10079359B /* DetailButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA34FAA16C3E4E10079359B /* DetailButton@2x.png */; };
 		ACC6B9EC16BAE28A009948EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC6B9EB16BAE28A009948EA /* UIKit.framework */; };
@@ -21,7 +24,6 @@
 		ACC6BA0416BAE28A009948EA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA0316BAE28A009948EA /* Default-568h@2x.png */; };
 		ACC6BA0716BAE28A009948EA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA0516BAE28A009948EA /* MainStoryboard.storyboard */; };
 		ACC6BA0A16BAE28A009948EA /* ParisBibli.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BA0816BAE28A009948EA /* ParisBibli.xcdatamodeld */; };
-		ACC6BA0D16BAE28A009948EA /* ParisBibliMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BA0C16BAE28A009948EA /* ParisBibliMasterViewController.m */; };
 		ACC6BA1016BAE28A009948EA /* ParisBibliDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BA0F16BAE28A009948EA /* ParisBibliDetailViewController.m */; };
 		ACC6BA1B16BAE697009948EA /* Bibliotheque.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BA1A16BAE697009948EA /* Bibliotheque.m */; };
 		ACC6BA2516BAF415009948EA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BA2416BAF415009948EA /* Default@2x.png */; };
@@ -36,6 +38,10 @@
 
 /* Begin PBXFileReference section */
 		4E92AC9330004DE4BB3099F3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		AC0DE3A216C3F23000D442FA /* ParisBibliInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParisBibliInfoViewController.h; sourceTree = "<group>"; };
+		AC0DE3A316C3F23000D442FA /* ParisBibliInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParisBibliInfoViewController.m; sourceTree = "<group>"; };
+		AC0DE3A916C3F46600D442FA /* bulte_abeille_rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulte_abeille_rectangle.png; sourceTree = "<group>"; };
+		AC0DE3AA16C3F46600D442FA /* bulte_abeille_rectangle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bulte_abeille_rectangle@2x.png"; sourceTree = "<group>"; };
 		ACA34FA916C3E4E10079359B /* DetailButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailButton.png; sourceTree = "<group>"; };
 		ACA34FAA16C3E4E10079359B /* DetailButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DetailButton@2x.png"; sourceTree = "<group>"; };
 		ACC6B9E816BAE28A009948EA /* ParisBibli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParisBibli.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,8 +60,6 @@
 		ACC6BA0316BAE28A009948EA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		ACC6BA0616BAE28A009948EA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		ACC6BA0916BAE28A009948EA /* ParisBibli.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParisBibli.xcdatamodel; sourceTree = "<group>"; };
-		ACC6BA0B16BAE28A009948EA /* ParisBibliMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParisBibliMasterViewController.h; sourceTree = "<group>"; };
-		ACC6BA0C16BAE28A009948EA /* ParisBibliMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParisBibliMasterViewController.m; sourceTree = "<group>"; };
 		ACC6BA0E16BAE28A009948EA /* ParisBibliDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParisBibliDetailViewController.h; sourceTree = "<group>"; };
 		ACC6BA0F16BAE28A009948EA /* ParisBibliDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParisBibliDetailViewController.m; sourceTree = "<group>"; };
 		ACC6BA1916BAE697009948EA /* Bibliotheque.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bibliotheque.h; path = ../Bibliotheque.h; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 			children = (
 				ACC6BA2C16BBE711009948EA /* iPhone.png */,
 				ACA34FA916C3E4E10079359B /* DetailButton.png */,
+				AC0DE3A916C3F46600D442FA /* bulte_abeille_rectangle.png */,
+				AC0DE3AA16C3F46600D442FA /* bulte_abeille_rectangle@2x.png */,
 				ACA34FAA16C3E4E10079359B /* DetailButton@2x.png */,
 				ACC6BA2A16BBE70D009948EA /* iPhone Retina.png */,
 				ACC6BA2816BAF426009948EA /* Default.png */,
@@ -160,8 +166,8 @@
 				ACC6BA0E16BAE28A009948EA /* ParisBibliDetailViewController.h */,
 				ACC6BA0F16BAE28A009948EA /* ParisBibliDetailViewController.m */,
 				ACC6BA0816BAE28A009948EA /* ParisBibli.xcdatamodeld */,
-				ACC6BA0B16BAE28A009948EA /* ParisBibliMasterViewController.h */,
-				ACC6BA0C16BAE28A009948EA /* ParisBibliMasterViewController.m */,
+				AC0DE3A216C3F23000D442FA /* ParisBibliInfoViewController.h */,
+				AC0DE3A316C3F23000D442FA /* ParisBibliInfoViewController.m */,
 				ACC6B9F416BAE28A009948EA /* Supporting Files */,
 			);
 			path = ParisBibli;
@@ -245,6 +251,8 @@
 				ACC6BA2D16BBE711009948EA /* iPhone.png in Resources */,
 				ACA34FAB16C3E4E10079359B /* DetailButton.png in Resources */,
 				ACA34FAC16C3E4E10079359B /* DetailButton@2x.png in Resources */,
+				AC0DE3AB16C3F46600D442FA /* bulte_abeille_rectangle.png in Resources */,
+				AC0DE3AC16C3F46600D442FA /* bulte_abeille_rectangle@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,10 +283,10 @@
 				ACC6B9FA16BAE28A009948EA /* main.m in Sources */,
 				ACC6B9FE16BAE28A009948EA /* ParisBibliAppDelegate.m in Sources */,
 				ACC6BA0A16BAE28A009948EA /* ParisBibli.xcdatamodeld in Sources */,
-				ACC6BA0D16BAE28A009948EA /* ParisBibliMasterViewController.m in Sources */,
 				ACC6BA1016BAE28A009948EA /* ParisBibliDetailViewController.m in Sources */,
 				ACC6BA1B16BAE697009948EA /* Bibliotheque.m in Sources */,
 				ACC6BA3B16BC4602009948EA /* ParisBibliMapViewController.m in Sources */,
+				AC0DE3A416C3F23000D442FA /* ParisBibliInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

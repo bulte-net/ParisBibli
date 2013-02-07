@@ -19,51 +19,6 @@
             </objects>
             <point key="canvasLocation" x="-193" y="-246"/>
         </scene>
-        <!--Paris Bibli Master View Controller - Master-->
-        <scene sceneID="18">
-            <objects>
-                <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="ParisBibliMasterViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" style="IBUITableViewCellStyleDefault" id="lJ0-d7-vTF">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="21" kind="push" identifier="showDetail" id="jZb-fq-zAk"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="12" id="16"/>
-                            <outlet property="delegate" destination="12" id="15"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="Drf-hp-8to"/>
-                    <navigationItem key="navigationItem" title="Master" id="36"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="513" y="-246"/>
-        </scene>
         <!--Paris Bibli Map View Controller - Item 1-->
         <scene sceneID="eUa-vT-3YT">
             <objects>
@@ -103,14 +58,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EaC-YN-mNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="513" y="424"/>
+            <point key="canvasLocation" x="391" y="-246"/>
         </scene>
         <!--Paris Bibli Detail View Controller - Detail-->
         <scene sceneID="24">
             <objects>
                 <viewController storyboardIdentifier="" title="Detail" id="21" customClass="ParisBibliDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="22">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Nom bibli" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="27">
@@ -131,11 +86,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1J0-Zk-vaN">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="139" id="QgD-ch-Xcq"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Itinéraire piéton" backgroundImage="DetailButtonPattern.png">
+                                <state key="normal" title="Itinéraire piéton" backgroundImage="DetailButton.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted">
@@ -161,19 +113,33 @@
                                     <action selector="openGoogleMaps:" destination="21" eventType="touchUpInside" id="NQv-g5-xIe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1D-xj-9q5">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2Kk-1y-IJJ" kind="modal" identifier="showInfo" modalTransitionStyle="flipHorizontal" id="Naw-mY-mcj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YgP-Eb-mCs" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4XO-5j-Olx"/>
                             <constraint firstItem="1J0-Zk-vaN" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="13" id="GVD-jc-K5d"/>
                             <constraint firstAttribute="trailing" secondItem="YgP-Eb-mCs" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Iun-or-XMd"/>
-                            <constraint firstItem="1J0-Zk-vaN" firstAttribute="top" secondItem="F1l-mZ-uQg" secondAttribute="top" type="default" id="P09-Bl-Pfn"/>
+                            <constraint firstItem="V1D-xj-9q5" firstAttribute="trailing" secondItem="F1l-mZ-uQg" secondAttribute="trailing" type="default" id="JrW-uv-7aW"/>
                             <constraint firstItem="27" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R0m-z7-TWk"/>
-                            <constraint firstItem="1J0-Zk-vaN" firstAttribute="bottom" secondItem="F1l-mZ-uQg" secondAttribute="bottom" type="default" id="a9T-ar-jEH"/>
-                            <constraint firstAttribute="trailing" secondItem="F1l-mZ-uQg" secondAttribute="trailing" constant="13" id="n28-pT-YSz"/>
+                            <constraint firstItem="F1l-mZ-uQg" firstAttribute="baseline" secondItem="1J0-Zk-vaN" secondAttribute="baseline" type="default" id="TDM-0W-kyH"/>
+                            <constraint firstAttribute="trailing" secondItem="V1D-xj-9q5" secondAttribute="trailing" constant="13" id="dqe-dH-wKJ"/>
                             <constraint firstAttribute="bottom" secondItem="1J0-Zk-vaN" secondAttribute="bottom" constant="67" id="nqi-fl-4hV"/>
                             <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pRe-qY-58T"/>
                             <constraint firstItem="27" firstAttribute="top" secondItem="22" secondAttribute="top" constant="51" id="shK-Xp-amf"/>
+                            <constraint firstAttribute="bottom" secondItem="V1D-xj-9q5" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="u4k-tl-E1U"/>
                             <constraint firstItem="YgP-Eb-mCs" firstAttribute="top" secondItem="22" secondAttribute="top" constant="116" id="vJ9-ja-LD2"/>
                         </constraints>
                     </view>
@@ -188,17 +154,121 @@
             </objects>
             <point key="canvasLocation" x="956" y="-246"/>
         </scene>
+        <!--Paris Bibli Info View Controller-->
+        <scene sceneID="GPG-za-a5L">
+            <objects>
+                <viewController id="2Kk-1y-IJJ" customClass="ParisBibliInfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kgB-bQ-IHO">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="bulte_abeille_rectangle.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ysv-ll-1vL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="k3f-St-ETK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="AsH-Rq-KqK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="aFf-1Z-Nes"/>
+                                </constraints>
+                                <string key="text">Application développée par bulté.net
+contact@bulte.net</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Données : Mairie de Paris opendata.paris.fr" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="2rH-Np-Zm8">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Book designed by Dmitry Baranovskiy from The Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="eTm-7L-IMW">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bee designed by Juan Sebastian Rickenmann from The Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="JrY-JC-76B">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umH-06-7Vx">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Retour" backgroundImage="DetailButton.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="21" kind="modal" identifier="returnToDetail" modalTransitionStyle="flipHorizontal" id="emC-Q5-cMB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eTm-7L-IMW" firstAttribute="leading" secondItem="kgB-bQ-IHO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0pa-5e-XA7"/>
+                            <constraint firstAttribute="trailing" secondItem="AsH-Rq-KqK" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3O1-r1-Odz"/>
+                            <constraint firstItem="eTm-7L-IMW" firstAttribute="top" secondItem="kgB-bQ-IHO" secondAttribute="top" constant="232" id="4io-3q-Uel"/>
+                            <constraint firstItem="2rH-Np-Zm8" firstAttribute="leading" secondItem="kgB-bQ-IHO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="520-XG-06u"/>
+                            <constraint firstItem="2rH-Np-Zm8" firstAttribute="top" secondItem="kgB-bQ-IHO" secondAttribute="top" constant="135" id="78t-Se-iFc"/>
+                            <constraint firstAttribute="trailing" secondItem="JrY-JC-76B" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Aed-64-Ote"/>
+                            <constraint firstAttribute="trailing" secondItem="eTm-7L-IMW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GbJ-GK-RMW"/>
+                            <constraint firstItem="Ysv-ll-1vL" firstAttribute="bottom" secondItem="kgB-bQ-IHO" secondAttribute="bottom" type="default" id="Ham-4B-OmZ"/>
+                            <constraint firstItem="AsH-Rq-KqK" firstAttribute="top" secondItem="kgB-bQ-IHO" secondAttribute="top" constant="73" id="IRb-Um-WSy"/>
+                            <constraint firstItem="AsH-Rq-KqK" firstAttribute="leading" secondItem="kgB-bQ-IHO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Mki-uk-zMb"/>
+                            <constraint firstAttribute="trailing" secondItem="2rH-Np-Zm8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Sqn-HH-B6n"/>
+                            <constraint firstItem="JrY-JC-76B" firstAttribute="leading" secondItem="kgB-bQ-IHO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Xec-gL-pqz"/>
+                            <constraint firstItem="umH-06-7Vx" firstAttribute="centerX" secondItem="AsH-Rq-KqK" secondAttribute="centerX" type="default" id="boW-bC-6OM"/>
+                            <constraint firstItem="Ysv-ll-1vL" firstAttribute="trailing" secondItem="kgB-bQ-IHO" secondAttribute="trailing" type="default" id="gqo-IX-yTk"/>
+                            <constraint firstItem="umH-06-7Vx" firstAttribute="top" secondItem="kgB-bQ-IHO" secondAttribute="top" constant="11" id="kyn-Bo-TFC"/>
+                            <constraint firstItem="Ysv-ll-1vL" firstAttribute="leading" secondItem="kgB-bQ-IHO" secondAttribute="leading" type="default" id="zfe-hj-sAr"/>
+                            <constraint firstItem="JrY-JC-76B" firstAttribute="top" secondItem="eTm-7L-IMW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zkW-tr-jIc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6hv-vb-GbE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wud-Nl-8Kh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1446" y="-246"/>
+        </scene>
     </scenes>
     <resources>
         <image name="DetailButton.png" width="139" height="44"/>
-        <image name="DetailButtonPattern.png" width="16" height="16"/>
+        <image name="bulte_abeille_rectangle.png" width="263" height="54"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ParisBibliDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParisBibliDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goByFoot:"/>
+                <relationship kind="action" name="openGoogleMaps:"/>
+                <relationship kind="outlet" name="detailAddress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailGoogleMaps" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="ParisBibliInfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParisBibliInfoViewController.h"/>
+        </class>
+        <class className="ParisBibliMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParisBibliMapViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refreshFeed:"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="5bX-CN-q4I"/>
+        <segue reference="emC-Q5-cMB"/>
     </inferredMetricsTieBreakers>
 </document>
