@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Bibliotheque.h"
 
 @interface ParisBibliInfoViewController : UIViewController
+- (IBAction)returnToDetail:(id)sender;
 
 @end

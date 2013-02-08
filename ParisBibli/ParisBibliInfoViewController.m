@@ -7,6 +7,8 @@
 //
 
 #import "ParisBibliInfoViewController.h"
+#import "ParisBibliDetailViewController.h"
+#import "Bibliotheque.h"
 
 @interface ParisBibliInfoViewController ()
 
@@ -35,4 +37,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+// Go back to previous view
+- (IBAction)returnToDetail:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

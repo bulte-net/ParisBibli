@@ -7,6 +7,7 @@
 //
 
 #import "ParisBibliDetailViewController.h"
+#import "ParisBibliInfoViewController.h"
 #import "Bibliotheque.h"
 #import "TestFlight.h"
 
@@ -21,7 +22,7 @@
 #pragma mark - Managing the detail item
 
 - (void)configureView
-{
+{    
     // Update the user interface for the detail item.
     if (self.bibli) {
         self.detailDescriptionLabel.text = self.bibli.nom;
