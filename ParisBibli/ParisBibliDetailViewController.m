@@ -33,7 +33,7 @@
             self.detailGoogleMaps.hidden = false;
         }
         // Hide detailItineraire if iOS < 6
-        if (! [[MKMapItem class] respondsToSelector:@selector(openInMapsWithLaunchOptions:)]){
+        if (! [[MKMapItem class] respondsToSelector:@selector(openMapsWithItems:launchOptions:)]){
             self.detailItineraire.hidden = true;
         }
     }
