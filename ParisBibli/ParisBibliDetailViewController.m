@@ -32,6 +32,10 @@
              [NSURL URLWithString:@"comgooglemaps://"]]) {
             self.detailGoogleMaps.hidden = false;
         }
+        // Hide detailItineraire if iOS < 6
+        if (! [[MKMapItem class] respondsToSelector:@selector(openInMapsWithLaunchOptions:)]){
+            self.detailItineraire.hidden = true;
+        }
     }
 }
 
@@ -57,5 +61,9 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)viewDidUnload {
+    [self setDetailItineraire:nil];
+    [super viewDidUnload];
 }
 @end
