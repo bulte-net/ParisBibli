@@ -26,6 +26,8 @@ static void ParisBibliShowAlertWithError(NSError *error)
 
 @implementation ParisBibliMapViewController
 
+CLLocationManager *locationManager;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -33,12 +35,13 @@ static void ParisBibliShowAlertWithError(NSError *error)
     RKLogConfigureByName("RestKit/Network", RKLogLevelDebug);
     
     // Setup View and Table View
-    self.title = @"Carte - ParisBibli";
+    self.title = @"Carte | ParisBibli";
     
-    MKUserTrackingBarButtonItem *buttonItem =[[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
-    self.navigationItem.rightBarButtonItem = buttonItem;
+//    MKUserTrackingBarButtonItem *buttonItem =[[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
+//    self.navigationItem.rightBarButtonItem = buttonItem;
     
     [self loadData];
+    locationManager = [[CLLocationManager alloc] init];
 }
 
 - (void)loadData
@@ -75,10 +78,10 @@ static void ParisBibliShowAlertWithError(NSError *error)
 }
 
 // user position updated
-- (void)mapView:(MKMapView *)mv didUpdateUserLocation:(MKUserLocation *)userLocation
-{
-    CLLocationCoordinate2D userCoordinate = userLocation.location.coordinate;
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
+    CLLocationCoordinate2D userCoordinate = newLocation.coordinate;
     [self moveToLocation:userCoordinate];
+    [locationManager stopUpdatingLocation];
 }
 
 - (void)moveToLocation:(CLLocationCoordinate2D)location {
@@ -89,6 +92,12 @@ static void ParisBibliShowAlertWithError(NSError *error)
 // Button refresh
 - (IBAction)refreshFeed:(id)sender {
     [self loadData];
+}
+
+- (IBAction)refreshLocation:(id)sender {
+    [locationManager setDelegate:(id)self];
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
 }
 
 // View for each pin
@@ -188,4 +197,7 @@ static void ParisBibliShowAlertWithError(NSError *error)
     return self;
 }
 
+- (void)viewDidUnload {
+    [super viewDidUnload];
+}
 @end

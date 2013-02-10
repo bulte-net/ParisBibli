@@ -11,6 +11,9 @@
 		AC0DE3A416C3F23000D442FA /* ParisBibliInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0DE3A316C3F23000D442FA /* ParisBibliInfoViewController.m */; };
 		AC0DE3AB16C3F46600D442FA /* bulte_abeille_rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0DE3A916C3F46600D442FA /* bulte_abeille_rectangle.png */; };
 		AC0DE3AC16C3F46600D442FA /* bulte_abeille_rectangle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0DE3AA16C3F46600D442FA /* bulte_abeille_rectangle@2x.png */; };
+		AC5F946516C6A126001542C0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5F946416C6A126001542C0 /* CoreLocation.framework */; };
+		AC5F946816C83C40001542C0 /* crosshair.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5F946616C83C40001542C0 /* crosshair.png */; };
+		AC5F946916C83C40001542C0 /* crosshair@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5F946716C83C40001542C0 /* crosshair@2x.png */; };
 		ACA34FAB16C3E4E10079359B /* DetailButton.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA34FA916C3E4E10079359B /* DetailButton.png */; };
 		ACA34FAC16C3E4E10079359B /* DetailButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA34FAA16C3E4E10079359B /* DetailButton@2x.png */; };
 		ACC6B9EC16BAE28A009948EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC6B9EB16BAE28A009948EA /* UIKit.framework */; };
@@ -42,6 +45,9 @@
 		AC0DE3A316C3F23000D442FA /* ParisBibliInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParisBibliInfoViewController.m; sourceTree = "<group>"; };
 		AC0DE3A916C3F46600D442FA /* bulte_abeille_rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulte_abeille_rectangle.png; sourceTree = "<group>"; };
 		AC0DE3AA16C3F46600D442FA /* bulte_abeille_rectangle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bulte_abeille_rectangle@2x.png"; sourceTree = "<group>"; };
+		AC5F946416C6A126001542C0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AC5F946616C83C40001542C0 /* crosshair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crosshair.png; path = ../../graphisme/crosshair.png; sourceTree = "<group>"; };
+		AC5F946716C83C40001542C0 /* crosshair@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "crosshair@2x.png"; path = "../../graphisme/crosshair@2x.png"; sourceTree = "<group>"; };
 		ACA34FA916C3E4E10079359B /* DetailButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailButton.png; sourceTree = "<group>"; };
 		ACA34FAA16C3E4E10079359B /* DetailButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DetailButton@2x.png"; sourceTree = "<group>"; };
 		ACC6B9E816BAE28A009948EA /* ParisBibli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParisBibli.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5F946516C6A126001542C0 /* CoreLocation.framework in Frameworks */,
 				ACC6BA4116C26C17009948EA /* AddressBook.framework in Frameworks */,
 				ACC6BA2F16BC4185009948EA /* MapKit.framework in Frameworks */,
 				ACC6B9EC16BAE28A009948EA /* UIKit.framework in Frameworks */,
@@ -98,6 +105,8 @@
 		ACA34FB516C3EA720079359B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AC5F946616C83C40001542C0 /* crosshair.png */,
+				AC5F946716C83C40001542C0 /* crosshair@2x.png */,
 				ACC6BA2C16BBE711009948EA /* iPhone.png */,
 				ACA34FA916C3E4E10079359B /* DetailButton.png */,
 				AC0DE3A916C3F46600D442FA /* bulte_abeille_rectangle.png */,
@@ -122,6 +131,7 @@
 		ACC6B9DF16BAE28A009948EA = {
 			isa = PBXGroup;
 			children = (
+				AC5F946416C6A126001542C0 /* CoreLocation.framework */,
 				ACA34FB616C3EA820079359B /* Ressources */,
 				ACA34FB516C3EA720079359B /* Images */,
 				ACC6B9F316BAE28A009948EA /* ParisBibli */,
@@ -253,6 +263,8 @@
 				ACA34FAC16C3E4E10079359B /* DetailButton@2x.png in Resources */,
 				AC0DE3AB16C3F46600D442FA /* bulte_abeille_rectangle.png in Resources */,
 				AC0DE3AC16C3F46600D442FA /* bulte_abeille_rectangle@2x.png in Resources */,
+				AC5F946816C83C40001542C0 /* crosshair.png in Resources */,
+				AC5F946916C83C40001542C0 /* crosshair@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

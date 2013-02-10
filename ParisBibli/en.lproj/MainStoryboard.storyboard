@@ -50,6 +50,12 @@
                                 <action selector="refreshFeed:" destination="Zs9-rm-7GH" id="v8u-Fe-sVL"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="crosshair.png" id="xlx-LQ-7JJ">
+                            <inset key="imageInsets" minX="8" minY="4" maxX="8" maxY="4"/>
+                            <connections>
+                                <action selector="refreshLocation:" destination="Zs9-rm-7GH" id="GuO-HL-LtM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
@@ -208,32 +214,8 @@ contact@bulte.net</string>
     <resources>
         <image name="DetailButton.png" width="139" height="44"/>
         <image name="bulte_abeille_rectangle.png" width="263" height="54"/>
+        <image name="crosshair.png" width="39" height="39"/>
     </resources>
-    <classes>
-        <class className="ParisBibliDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParisBibliDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goByFoot:"/>
-                <relationship kind="action" name="openGoogleMaps:"/>
-                <relationship kind="outlet" name="detailAddress" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detailGoogleMaps" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="ParisBibliInfoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParisBibliInfoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="returnToDetail:"/>
-            </relationships>
-        </class>
-        <class className="ParisBibliMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParisBibliMapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="refreshFeed:"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
