@@ -24,7 +24,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Test Flight
-    [TestFlight takeOff:@"511db6b67f0e3b8d01c5a4dea510f362_MTg0Mjc1MjAxMy0wMi0wNiAxNTo0OTo1MS4yMzk3MjM"];
+    [TestFlight takeOff:@"71ab6b0e-89ff-41eb-a605-f14271d446a9"];
     
     // Initialize RestKit
     NSURL *baseURL = [NSURL URLWithString:@"http://maboiteprivee.org"];

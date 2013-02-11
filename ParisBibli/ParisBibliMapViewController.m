@@ -32,7 +32,7 @@ CLLocationManager *locationManager;
 {
     [super viewDidLoad];
     // Set debug logging level. Set to 'RKLogLevelTrace' to see JSON payload
-    RKLogConfigureByName("RestKit/Network", RKLogLevelDebug);
+    RKLogConfigureByName("RestKit/Network", RKLogLevelDefault);
     
     // Setup View and Table View
     self.title = @"Carte | ParisBibli";
@@ -81,7 +81,6 @@ CLLocationManager *locationManager;
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
     CLLocationCoordinate2D userCoordinate = newLocation.coordinate;
     [self moveToLocation:userCoordinate];
-    NSLog(@"Accuracy : %f", newLocation.horizontalAccuracy);
     // precison < 100m, stop refreshing
     if( newLocation.horizontalAccuracy < 100){
         [locationManager stopUpdatingLocation];
