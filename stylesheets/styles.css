@@ -60,6 +60,11 @@ h1,h2, h3 {
 
 h1 {
 	font-size: 30px;
+    background-image: url('../images/iPhone.png');
+    background-repeat: no-repeat;
+    margin-left: -45px;
+    padding-left: 45px;
+    background-size: 40px;
 }
 
 h2 {
@@ -138,15 +143,15 @@ hr {
   margin:0 0 24px;
 }
 
-/* Images */
+/* Images 
 
 img {
   position: relative;
   margin: 0 auto;
   max-width: 650px;
   padding: 5px;
-  margin: 10px 0 32px 0;
-  border: 1px solid #ccc;
+  /*margin: 10px 0 32px 0;*/
+  /*border: 1px solid #ccc;*/
 }
 
 
@@ -311,7 +316,6 @@ a.buttons:hover {
 section {
   width:650px;
   float:right;
-  padding-bottom:50px;
 }
 
 
