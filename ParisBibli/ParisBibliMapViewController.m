@@ -37,11 +37,11 @@ CLLocationManager *locationManager;
     // Setup View and Table View
     self.title = @"Carte | ParisBibli";
     
-//    MKUserTrackingBarButtonItem *buttonItem =[[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
-//    self.navigationItem.rightBarButtonItem = buttonItem;
-    
     [self loadData];
     locationManager = [[CLLocationManager alloc] init];
+    [locationManager setDelegate:(id)self];
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
 }
 
 - (void)loadData
@@ -81,7 +81,11 @@ CLLocationManager *locationManager;
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
     CLLocationCoordinate2D userCoordinate = newLocation.coordinate;
     [self moveToLocation:userCoordinate];
-    [locationManager stopUpdatingLocation];
+    NSLog(@"Accuracy : %f", newLocation.horizontalAccuracy);
+    // precison < 100m, stop refreshing
+    if( newLocation.horizontalAccuracy < 100){
+        [locationManager stopUpdatingLocation];
+    }
 }
 
 - (void)moveToLocation:(CLLocationCoordinate2D)location {
@@ -95,8 +99,6 @@ CLLocationManager *locationManager;
 }
 
 - (IBAction)refreshLocation:(id)sender {
-    [locationManager setDelegate:(id)self];
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
 }
 
