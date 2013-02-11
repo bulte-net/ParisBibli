@@ -143,15 +143,21 @@ hr {
   margin:0 0 24px;
 }
 
-/* Images 
+/* Images */
 
 img {
-  position: relative;
+/*  position: relative;
   margin: 0 auto;
   max-width: 650px;
-  padding: 5px;
+  padding: 5px;*/
   /*margin: 10px 0 32px 0;*/
   /*border: 1px solid #ccc;*/
+}
+
+.app-image {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
 }
 
 
