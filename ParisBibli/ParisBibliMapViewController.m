@@ -26,19 +26,22 @@ static void ParisBibliShowAlertWithError(NSError *error)
 
 @implementation ParisBibliMapViewController
 
+CLLocationManager *locationManager;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Set debug logging level. Set to 'RKLogLevelTrace' to see JSON payload
-    RKLogConfigureByName("RestKit/Network", RKLogLevelDebug);
+    RKLogConfigureByName("RestKit/Network", RKLogLevelDefault);
     
     // Setup View and Table View
-    self.title = @"Carte - ParisBibli";
-    
-    MKUserTrackingBarButtonItem *buttonItem =[[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
-    self.navigationItem.rightBarButtonItem = buttonItem;
+    self.title = @"Carte | ParisBibli";
     
     [self loadData];
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager setDelegate:(id)self];
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
 }
 
 - (void)loadData
@@ -47,9 +50,10 @@ static void ParisBibliShowAlertWithError(NSError *error)
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     // Load the object model via RestKit
     [[RKObjectManager sharedManager] getObjectsAtPath:@"/bibliotheques/bibliotheques.json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        RKLogInfo(@"Load complete.");
         [[NSUserDefaults standardUserDefaults] synchronize];
+//        RKManagedObjectStore *managedObjectStore = [RKObjectManager.sharedManager managedObjectStore];
         [self drawLocations];
+        RKLogInfo(@"Load complete.");
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         RKLogError(@"Load failed with error: %@", error);
         ParisBibliShowAlertWithError(error);
@@ -74,10 +78,13 @@ static void ParisBibliShowAlertWithError(NSError *error)
 }
 
 // user position updated
-- (void)mapView:(MKMapView *)mv didUpdateUserLocation:(MKUserLocation *)userLocation
-{
-    CLLocationCoordinate2D userCoordinate = userLocation.location.coordinate;
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
+    CLLocationCoordinate2D userCoordinate = newLocation.coordinate;
     [self moveToLocation:userCoordinate];
+    // precison < 100m, stop refreshing
+    if( newLocation.horizontalAccuracy < 100){
+        [locationManager stopUpdatingLocation];
+    }
 }
 
 - (void)moveToLocation:(CLLocationCoordinate2D)location {
@@ -88,6 +95,10 @@ static void ParisBibliShowAlertWithError(NSError *error)
 // Button refresh
 - (IBAction)refreshFeed:(id)sender {
     [self loadData];
+}
+
+- (IBAction)refreshLocation:(id)sender {
+    [locationManager startUpdatingLocation];
 }
 
 // View for each pin
@@ -187,4 +198,7 @@ static void ParisBibliShowAlertWithError(NSError *error)
     return self;
 }
 
+- (void)viewDidUnload {
+    [super viewDidUnload];
+}
 @end

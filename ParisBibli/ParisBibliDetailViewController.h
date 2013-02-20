@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailAddress;
 @property (weak, nonatomic) IBOutlet UIButton *detailGoogleMaps;
+@property (weak, nonatomic) IBOutlet UIButton *detailItineraire;
 
 - (IBAction)goByFoot:(id)sender;
 - (IBAction)openGoogleMaps:(id)sender;

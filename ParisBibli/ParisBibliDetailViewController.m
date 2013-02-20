@@ -7,6 +7,7 @@
 //
 
 #import "ParisBibliDetailViewController.h"
+#import "ParisBibliInfoViewController.h"
 #import "Bibliotheque.h"
 #import "TestFlight.h"
 
@@ -21,7 +22,7 @@
 #pragma mark - Managing the detail item
 
 - (void)configureView
-{
+{    
     // Update the user interface for the detail item.
     if (self.bibli) {
         self.detailDescriptionLabel.text = self.bibli.nom;
@@ -30,6 +31,10 @@
         if ([[UIApplication sharedApplication] canOpenURL:
              [NSURL URLWithString:@"comgooglemaps://"]]) {
             self.detailGoogleMaps.hidden = false;
+        }
+        // Hide detailItineraire if iOS < 6
+        if (! [[MKMapItem class] respondsToSelector:@selector(openMapsWithItems:launchOptions:)]){
+            self.detailItineraire.hidden = true;
         }
     }
 }
@@ -56,5 +61,9 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)viewDidUnload {
+    [self setDetailItineraire:nil];
+    [super viewDidUnload];
 }
 @end
